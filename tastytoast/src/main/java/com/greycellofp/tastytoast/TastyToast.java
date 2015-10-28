@@ -168,6 +168,12 @@ public class TastyToast {
         return this;
     }
 
+    public TastyToast setLayoutGravity(int gravity,int topMargin){
+        mLayoutParams = new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, gravity);
+        ((FrameLayout.LayoutParams)mLayoutParams).topMargin = topMargin;
+        return this;
+    }
+
     public boolean isFloating(){
         return mFloating;
     }
